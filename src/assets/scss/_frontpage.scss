@@ -1,0 +1,110 @@
+.off-color {
+  background: $light-gray;
+}
+.slideshow {
+  position: relative;
+  z-index: 1;
+  height: rem-calc(240);
+  background-image: url('../images/photo-audience.jpg');
+  transition: background 1s linear;
+  .social {
+    display: none;
+  }
+  .info-bar {
+    padding-top: rem-calc(10);
+    padding-bottom: rem-calc(10);
+    position: absolute;
+    margin-bottom: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .33);
+    color: $white;
+    font-size: 0.9em;
+    .date-location {
+      .date, .location {
+        display: block;
+      }
+      span {
+        display: none;
+      }
+    }
+    @include breakpoint(large) {
+      font-size: 1.2em;
+      .date-location {
+        .date, .location, span {
+          display: inline-block;
+        }
+      }
+      .social {
+        display: block;
+        text-align: right;
+        ul li {
+          padding-right: 0;
+          padding-left: rem-calc(10);
+        }
+      }
+    }
+  }
+  @include breakpoint(medium) {
+    height: rem-calc(400);
+  }
+}
+.intro {
+  .lead {
+    @include breakpoint(small down) {
+      font-size: $global-font-size;
+      line-height: $global-lineheight;
+    }
+  }
+}
+.venue {
+  position: relative;
+  z-index: 1;
+  height: rem-calc(400);
+  background-image: url('../images/photo-hyatt-atrium.jpg');
+  background-attachment: fixed;
+  &::before {
+    @include tint();
+  }
+  .row {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    color: $white;
+    div {
+      background: rgba(0, 0, 0, .25);
+    }
+  }
+}
+.about {
+  @include breakpoint(medium) {
+    padding-top: rem-calc(60);
+    padding-bottom: rem-calc(60);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+    background-image: url('../images/bg-svglobe.jpg');
+  }
+}
+.partner-list {
+  &.text-center {
+    font-size: 0;
+    > li {
+      float: none;
+      display: inline-block;
+    }
+  }
+  img {
+    margin-left: rem-calc(10);
+    margin-right: rem-calc(10);
+  }
+}
+.worldmap {
+  width: rem-calc(400);
+}
+.brain {
+  width: rem-calc(200);
+}

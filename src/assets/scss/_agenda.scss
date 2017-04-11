@@ -1,0 +1,64 @@
+.agenda {
+  list-style-type: none;
+  margin-left: 0;
+  .agenda-item:not(:last-child) {
+    border-bottom: rem-calc(1) solid $medium-gray;
+  }
+  .agenda-item:hover .session.sub-session {
+    border-color: $dark-gray;
+  }
+}
+.session {
+  padding: 0.5rem 0;
+  .title {
+    display: block;
+    font-size: 1.4rem;
+  }
+  .time {
+    color: $dark-gray;
+  }
+  .format {
+    color: $dark-gray;
+    &::before {
+      content: ' - ';
+    }
+  }
+  .description {
+    display: block;
+  }
+  .speaker-list {
+    list-style-type: none;
+    margin-left: 0;
+  }
+  &.sub-session {
+    margin: rem-calc(5) 0;
+    padding-left: rem-calc(10);
+    border-left: rem-calc(2) solid $light-gray;
+  }
+
+}
+.speaker-list {
+  .speaker-img {
+    width: 2.5rem;
+    border-radius: 100%;
+  }
+  .speaker-name,
+  .speaker-desc {
+    display: block;
+    font-size: rem-calc(12);
+    text-align: center;
+    @include breakpoint(medium) {
+      text-align: left;
+    }
+  }
+  .moderator {
+    color: $dark-gray;
+    &::before {
+      content: ' ';
+    }
+  }
+  h5 {
+    color: $dark-gray;
+    font-weight: 400;
+  }
+}

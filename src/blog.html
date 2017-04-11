@@ -1,0 +1,28 @@
+---
+layout: default
+title: Blog
+---
+<section class="section program">
+  <div class="row">
+    <div class="small-10 columns small-centered">
+      <h2 class="primary text-center page-head">Blog</h2>
+
+      <ul class="post-list">
+        {% for post in site.posts %}
+          <li>
+            <h4 class="thin">
+              <!-- <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> -->
+              <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+            </h4>
+            <p class="post-meta text-small secondary">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author }}</span></span>{% endif %}</p>
+            <div class="excerpt">
+              {{ post.excerpt }}
+            </div>
+            <a class="post-link" href="{{ post.url }}">Read More...</a>
+          </li>
+        {% endfor %}
+      </ul>
+
+    </div>
+  </div>
+</section>

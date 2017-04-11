@@ -1,0 +1,10 @@
+.program {
+  .photo img {
+    @include thumbnail;
+    @include breakpoint(medium) {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

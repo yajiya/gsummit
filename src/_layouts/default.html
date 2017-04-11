@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+    <div class="reveal speaker-modal" id="speaker-detail" data-reveal>
+      <div class="container">
+        <div class="row">
+          <div class="small-12 medium-4 columns photo">
+          </div>
+          <div class="small-12 medium-8 columns">
+            <div class="speaker-name"></div>
+            <div class="speaker-title"></div>
+            <div class="speaker-company"></div>
+            <div class="speaker-bio"></div>
+          </div>
+        </div>
+      </div>
+      <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+  <!-- JS -->
+  <!-- inject:js -->
+  <!-- endinject -->
+
+
+  <!-- <div style="display:none">
+    <script type="text/javascript" src="//s11.cnzz.com/z_stat.php?id=1260157284&web_id=1260157284"></script>
+  </div> -->
+
+  {% if page.maps %}
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANcJnIsKiKnrECNVCgdUouNIsdEP7qHzA&callback=initMap" async defer></script>
+  {% endif %}
+  </body>
+
+</html>

@@ -1,0 +1,64 @@
+.speakers, .speaker-modal {
+  .columns:last-child:not(:first-child) {
+    float: left;
+  }
+  .columns:nth-child(3n+1) {
+    clear: both;
+  }
+  .speaker-box {
+    margin-bottom: rem-calc(10);
+    img {
+      border-bottom: rem-calc(2) solid map-get($foundation-palette, secondary);
+    }
+  }
+  .speaker-name,
+  .speaker-title,
+  .speaker-company,
+  .speaker-bio {
+    font-size: 0.7em;
+    text-align: center;
+    @include breakpoint(medium) {
+      font-size: .8em;
+    }
+  }
+  .speaker-bio {
+    text-align: left;
+  }
+  .speaker-name {
+    font-weight: bold;
+  }
+  .speaker-company {
+    font-style: italic;
+  }
+  .speaker-photo {
+    display: block;
+    margin: 0 auto rem-calc(10);
+    @include breakpoint(medium) {
+      margin: 0 auto;
+    }
+  }
+  @include breakpoint(medium) {
+    .columns:nth-child(3n+1) {
+      clear: none;
+    }
+    .columns:nth-child(4n+1) {
+      clear: both;
+    }
+    .five-col.columns:nth-child(4n+1) {
+      clear: none;
+    }
+    .five-col.columns:nth-child(5n+1) {
+      clear: both;
+    }
+  }
+}
+.speaker-modal {
+  .speaker-name,
+  .speaker-title,
+  .speaker-company,
+  .speaker-bio {
+    @include breakpoint(medium) {
+      text-align: left;
+    }
+  }
+}

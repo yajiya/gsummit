@@ -1,0 +1,24 @@
+{
+  "name": "g-summit",
+  "description": "Engage for the Future",
+  "main": "",
+  "authors": [
+    "Peter <peter.lw@gwc.net>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "6.2.3",
+    "font-awesome": "4.6.3",
+    "moment": "2.15.0",
+    "moment-timezone": "0.5.5"
+  }
+}
